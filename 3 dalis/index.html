@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third task</title>
+</head>
+<body>
+    <button>Make a box</button>
+
+    <script>
+
+    let box = document.createElement("div");
+    box.style.height = "20px";
+    box.style.width = "20px";
+
+    document.querySelector("button").addEventListener("click", (e) => {
+    e.preventDefault();
+    box.style.height += box.style.height + "20px";
+    box.style.width += box.style.width + "20px";
+    box.style.backgroundColor = "green";
+    document.body.appendChild(box);
+    });
+
+
+    </script>
+</body>
+</html>
