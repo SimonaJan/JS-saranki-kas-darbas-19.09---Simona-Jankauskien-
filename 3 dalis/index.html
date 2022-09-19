@@ -10,20 +10,15 @@
     <button>Make a box</button>
 
     <script>
-
-    let box = document.createElement("div");
-    box.style.height = "20px";
-    box.style.width = "20px";
-
+    
     document.querySelector("button").addEventListener("click", (e) => {
-    e.preventDefault();
-    box.style.height += box.style.height + "20px";
-    box.style.width += box.style.width + "20px";
-    box.style.backgroundColor = "green";
-    document.body.appendChild(box);
-    });
-
-
+  e.preventDefault();
+  let box = document.createElement("div");
+  box.style.height = box.offsetHeight + "20px";
+  box.style.width = box.offsetWidth + "20px";
+  box.style.backgroundColor = "green";
+  document.body.appendChild(box);
+});
     </script>
 </body>
 </html>
